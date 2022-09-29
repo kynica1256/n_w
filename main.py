@@ -6,31 +6,6 @@ np.random.seed(1)
 
 #in_data_2 = np.random.random((1,10))
 
-"""
-
-0 - 
-
-(function() {const a = document.querySelectorAll('ol > li')[0].innerText;console.log(a.slice(0, a.indexOf("[")-1));})()
-
-
-let a = document.querySelectorAll('ol > li');
-a.map((element) => {
-	let elem_l = element.innerText;
-	return elem_l.slice(0, elem_l.indexOf("[")-1);
-})
-
-let a = document.querySelectorAll('ol > li');
-let data = [];
-for (let i of a) {
-	let b = i.innerText;
-	data.push(b.slice(0, b.indexOf("[")-1))
-}
-console.log(data.length)
-console.log(JSON.stringify(data).toLowerCase());
-//console.log(data.join(",").toLowerCase().split(","));
-
-
-"""
 
 def sigmoid(x):
 	return 1/(1+np.exp(-x))
