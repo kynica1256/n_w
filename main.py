@@ -31,21 +31,31 @@ alpha = 0.2
 
 for i in range(50):
 	error = 0
+	correct_cnt = 0
 	for b in range(len(train_data)):
 		layer0 = train_data[b]
-		print(layer0)
+
 		layer1 = relu(np.dot(layer0, w1))
+
+		dropout_mask = np.random.randint(2, size=layer1.shape)
+		layer1*=dropout_mask*2
+
 		layer2 = relu(np.dot(layer1, w2))
 		layer3 = sigmoid(np.dot(layer2, w3))
 
 		error += np.sum((layer3-correct_data[b])**2)
 
+		correct_cnt += int(np.argmax(layer3) == np.argmax(correct_data[b]))
+
 		delta3 = layer3-correct_data[b]
-		print(layer2.T)
+
 		delta2 = delta3.dot(w3.T) * relu2deriv(layer2)
 		delta1 = delta2.dot(w2.T) * relu2deriv(layer1)
-		print(delta3)
+
 		w3 -= alpha * np.array([layer2]).T.dot(np.array([delta3]))
 		w2 -= alpha * np.array([layer1]).T.dot(np.array([delta2]))
 		w1 -= alpha * np.array([layer0]).T.dot(np.array([delta1]))
 	print(error)
+	print("     ")
+	print(correct_cnt)
+
