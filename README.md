@@ -9,4 +9,4 @@ pip install tqdm
 
 <br>
 
-<code>This neural network determines the tone of the text. For the dataset, reviews were taken from the imdb website.</code>
+<p style="font-size:30px;">This neural network determines the tone of the text. For the dataset, reviews were taken from the imdb website.</p>
