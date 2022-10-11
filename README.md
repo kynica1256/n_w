@@ -6,3 +6,7 @@ pip install numpy
 
 pip install tqdm
 </pre>
+
+<br>
+
+<code>This neural network determines the tone of the text. For the dataset, reviews were taken from the imdb website.</code>
