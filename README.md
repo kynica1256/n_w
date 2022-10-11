@@ -1,7 +1,7 @@
 # n_w
 
-<code>
+<pre>
 pip install numpy
 
 pip install tqdm
-</code>
+</pre>
