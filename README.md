@@ -10,3 +10,6 @@ pip install tqdm
 <br>
 
 <p style="font-size:30px;">This neural network determines the tone of the text. For the dataset, reviews were taken from the imdb website.</p>
+<br>
+<a href="https://ai.stanford.edu/~amaas/data/sentiment/">
+link to dataset - https://ai.stanford.edu/~amaas/data/sentiment/</a>
